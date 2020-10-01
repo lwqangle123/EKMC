@@ -1,0 +1,35 @@
+<additional>
+  <inductionLoop id="myLoop1" lane="-gneE12_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop2" lane="-gneE12_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop3" lane="-gneE13_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop4" lane="-gneE13_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop5" lane="-gneE14_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop6" lane="-gneE14_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop7" lane="-gneE15_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop8" lane="-gneE15_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop9" lane="-gneE16_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop10" lane="-gneE16_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop11" lane="-gneE17_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop12" lane="-gneE17_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop13" lane="-gneE18_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop14" lane="-gneE18_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop15" lane="-gneE19_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop16" lane="-gneE19_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop17" lane="-gneE20_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop18" lane="-gneE20_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop19" lane="-gneE21_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop20" lane="-gneE21_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop21" lane="-gneE22_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop22" lane="-gneE22_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop23" lane="-gneE23_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop24" lane="-gneE23_1" pos="195.5" freq="1" file="outloop.xml"/>
+
+  <inductionLoop id="myLoop25" lane="gneE12_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop26" lane="gneE12_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop27" lane="gneE13_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop28" lane="gneE13_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop29" lane="gneE14_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop30" lane="gneE14_1" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop31" lane="gneE15_0" pos="195.5" freq="1" file="outloop.xml"/>
+  <inductionLoop id="myLoop32" lane="gneE15_1" pos="195.5" freq="1" file="outloop.xml"/>
+</additional>

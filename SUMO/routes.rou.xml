@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 07/14/20 18:43:58 by Eclipse SUMO dfrouter Version 1.6.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/dfrouterConfiguration.xsd">
+
+    <input>
+        <net-file value="network.net.xml"/>
+        <detector-files value="dettype.xml"/>
+        <measure-files value="meaflows.csv"/>
+    </input>
+
+    <output>
+        <routes-output value="routes.rou.xml"/>
+        <emitters-output value="vehicle.xml"/>
+    </output>
+
+    <processing>
+        <randomize-flows value="true"/>
+        <time-step value="86400"/>
+    </processing>
+
+    <defaults>
+        <departspeed value="10.5"/>
+    </defaults>
+
+</configuration>
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+
+    <route id="-gneE16_to_gneE23" edges="-gneE16 gneE23"/>
+    <route id="-gneE16_to_gneE17" edges="-gneE16 -gneE15 gneE17"/>
+    <route id="-gneE16_to_gneE21" edges="-gneE16 gneE12 gneE21"/>
+    <route id="-gneE16_to_gneE22" edges="-gneE16 gneE12 gneE22"/>
+    <route id="-gneE16_to_gneE18" edges="-gneE16 -gneE15 gneE18"/>
+    <route id="-gneE16_to_gneE20" edges="-gneE16 gneE12 gneE13 gneE20"/>
+    <route id="-gneE16_to_gneE19" edges="-gneE16 gneE12 gneE13 gneE19"/>
+    <route id="-gneE16_to_gneE16" edges="-gneE16 gneE12 gneE13 gneE14 gneE15 gneE16"/>
+
+    <route id="-gneE17_to_gneE18" edges="-gneE17 gneE18"/>
+    <route id="-gneE17_to_gneE20" edges="-gneE17 -gneE14 gneE20"/>
+    <route id="-gneE17_to_gneE16" edges="-gneE17 gneE15 gneE16"/>
+    <route id="-gneE17_to_gneE23" edges="-gneE17 gneE15 gneE23"/>
+    <route id="-gneE17_to_gneE19" edges="-gneE17 -gneE14 gneE19"/>
+    <route id="-gneE17_to_gneE22" edges="-gneE17 -gneE14 -gneE13 gneE22"/>
+    <route id="-gneE17_to_gneE21" edges="-gneE17 -gneE14 -gneE13 gneE21"/>
+    <route id="-gneE17_to_gneE17" edges="-gneE17 -gneE14 -gneE13 -gneE12 -gneE15 gneE17"/>
+
+    <route id="-gneE18_to_gneE17" edges="-gneE18 gneE17"/>
+    <route id="-gneE18_to_gneE19" edges="-gneE18 -gneE14 gneE19"/>
+    <route id="-gneE18_to_gneE23" edges="-gneE18 gneE15 gneE23"/>
+    <route id="-gneE18_to_gneE16" edges="-gneE18 gneE15 gneE16"/>
+    <route id="-gneE18_to_gneE20" edges="-gneE18 -gneE14 gneE20"/>
+    <route id="-gneE18_to_gneE22" edges="-gneE18 gneE15 gneE12 gneE22"/>
+    <route id="-gneE18_to_gneE21" edges="-gneE18 gneE15 gneE12 gneE21"/>
+    <route id="-gneE18_to_gneE18" edges="-gneE18 gneE15 gneE12 gneE13 gneE14 gneE18"/>
+
+    <route id="-gneE19_to_gneE20" edges="-gneE19 gneE20"/>
+    <route id="-gneE19_to_gneE22" edges="-gneE19 -gneE13 gneE22"/>
+    <route id="-gneE19_to_gneE18" edges="-gneE19 gneE14 gneE18"/>
+    <route id="-gneE19_to_gneE17" edges="-gneE19 gneE14 gneE17"/>
+    <route id="-gneE19_to_gneE21" edges="-gneE19 -gneE13 gneE21"/>
+    <route id="-gneE19_to_gneE16" edges="-gneE19 -gneE13 -gneE12 gneE16"/>
+    <route id="-gneE19_to_gneE23" edges="-gneE19 -gneE13 -gneE12 gneE23"/>
+    <route id="-gneE19_to_gneE19" edges="-gneE19 -gneE13 -gneE12 -gneE15 -gneE14 gneE19"/>
+
+    <route id="-gneE20_to_gneE19" edges="-gneE20 gneE19"/>
+    <route id="-gneE20_to_gneE21" edges="-gneE20 -gneE13 gneE21"/>
+    <route id="-gneE20_to_gneE17" edges="-gneE20 gneE14 gneE17"/>
+    <route id="-gneE20_to_gneE18" edges="-gneE20 gneE14 gneE18"/>
+    <route id="-gneE20_to_gneE22" edges="-gneE20 -gneE13 gneE22"/>
+    <route id="-gneE20_to_gneE16" edges="-gneE20 gneE14 gneE15 gneE16"/>
+    <route id="-gneE20_to_gneE23" edges="-gneE20 gneE14 gneE15 gneE23"/>
+    <route id="-gneE20_to_gneE20" edges="-gneE20 gneE14 gneE15 gneE12 gneE13 gneE20"/>
+
+    <route id="-gneE21_to_gneE22" edges="-gneE21 gneE22"/>
+    <route id="-gneE21_to_gneE16" edges="-gneE21 -gneE12 gneE16"/>
+    <route id="-gneE21_to_gneE20" edges="-gneE21 gneE13 gneE20"/>
+    <route id="-gneE21_to_gneE19" edges="-gneE21 gneE13 gneE19"/>
+    <route id="-gneE21_to_gneE23" edges="-gneE21 -gneE12 gneE23"/>
+    <route id="-gneE21_to_gneE18" edges="-gneE21 -gneE12 -gneE15 gneE18"/>
+    <route id="-gneE21_to_gneE17" edges="-gneE21 -gneE12 -gneE15 gneE17"/>
+    <route id="-gneE21_to_gneE21" edges="-gneE21 -gneE12 -gneE15 -gneE14 -gneE13 gneE21"/>
+
+    <route id="-gneE22_to_gneE21" edges="-gneE22 gneE21"/>
+    <route id="-gneE22_to_gneE23" edges="-gneE22 -gneE12 gneE23"/>
+    <route id="-gneE22_to_gneE19" edges="-gneE22 gneE13 gneE19"/>
+    <route id="-gneE22_to_gneE20" edges="-gneE22 gneE13 gneE20"/>
+    <route id="-gneE22_to_gneE16" edges="-gneE22 -gneE12 gneE16"/>
+    <route id="-gneE22_to_gneE18" edges="-gneE22 gneE13 gneE14 gneE18"/>
+    <route id="-gneE22_to_gneE17" edges="-gneE22 gneE13 gneE14 gneE17"/>
+    <route id="-gneE22_to_gneE22" edges="-gneE22 gneE13 gneE14 gneE15 gneE12 gneE22"/>
+
+    <route id="-gneE23_to_gneE16" edges="-gneE23 gneE16"/>
+    <route id="-gneE23_to_gneE18" edges="-gneE23 -gneE15 gneE18"/>
+    <route id="-gneE23_to_gneE22" edges="-gneE23 gneE12 gneE22"/>
+    <route id="-gneE23_to_gneE21" edges="-gneE23 gneE12 gneE21"/>
+    <route id="-gneE23_to_gneE17" edges="-gneE23 -gneE15 gneE17"/>
+    <route id="-gneE23_to_gneE20" edges="-gneE23 -gneE15 -gneE14 gneE20"/>
+    <route id="-gneE23_to_gneE19" edges="-gneE23 -gneE15 -gneE14 gneE19"/>
+    <route id="-gneE23_to_gneE23" edges="-gneE23 -gneE15 -gneE14 -gneE13 -gneE12 gneE23"/>
+
+
+</routes>
