@@ -1,5 +1,9 @@
 # EKMC
 ensemble kerneled matrix completion
+
+
+
+
 The file ‘toy_exam_data’ contains the high-resolution data used in the toy example.
 The file ‘data’ consists of synthetic data simulated by SUMO, where ‘outloop1’ and ‘outloop2’ denote the 1st and 2nd day’s data.
 The m.files ‘rbf1’,’nlmc_bcd’ are basic functions shared by the toy example and the synthetic data (SUMO data) based experiments. Specifically, ‘rbf1’ is the kernel function and ‘nlmc_bcd’ is the code for block coordinate descent algorithm.
