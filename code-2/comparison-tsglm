@@ -1,4 +1,4 @@
-%% comparison-glm
+%% matlab m file: tsglm
 for j=1:32
     bb=glmfit(X_tr,Y_tr(:,j),'binomial');
     yhat(:,j) = glmval(bb,X_tr,'logit');
