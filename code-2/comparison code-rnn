@@ -1,0 +1,40 @@
+%% rnn
+for j=1:32
+numFeatures = 3840;
+numResponses = size(Ytr(:,j)',1);
+numHiddenUnits = 100;
+numClasses = 2;
+
+layers = [ ...
+    sequenceInputLayer(numFeatures)
+    lstmLayer(numHiddenUnits,'OutputMode','sequence')
+    fullyConnectedLayer(numClasses)
+    softmaxLayer
+    classificationLayer];
+
+maxEpochs = 60;
+miniBatchSize = 10;
+
+options = trainingOptions('adam', ...
+    'MaxEpochs',60, ...
+    'GradientThreshold',2, ...
+    'InitialLearnRate',0.01, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+
+net = trainNetwork(X_tr',Ytr(:,j)',layers,options);
+
+
+YPred(j,:) = double(classify(net,X_te'))-1;
+
+end
+
+for j=1:32
+    YPred(j,:)=double(YPred(j,:)>mean(YPred(j,:)));
+    [m,n]=find(YPred(j,:)==Y_te(:,j)');
+    Ac(j)=length(m)/5000;
+    [m2,n2]=find((YPred(j,:)+Y_te(:,j)')==0);
+    [m3,n3]=find((YPred(j,:)+Y_te(:,j)')==2);
+    Sk(j)=length(m3)/length(m2);
+end
