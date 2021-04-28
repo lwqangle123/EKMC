@@ -1,0 +1,12 @@
+%% comparison-glm
+for j=1:32
+    bb=glmfit(X_tr,Y_tr(:,j),'binomial');
+    yhat(:,j) = glmval(bb,X_tr,'logit');
+    yhat(:,j)=double(yhat(:,j)>0.5);
+    [m,n]=find(yhat(:,j)==Y_te(:,j));
+    Ac(j)=length(m)/size(yhat,1);
+    [m1,n1]=find(yhat(:,j)~=0);
+    [m2,n2]=find(Y_te(:,j)~=0);
+    [m3,n3]=find((yhat(:,j)+Y_te(:,j))==2);
+    Sk(j)=length(m3)/length(m2);
+end
