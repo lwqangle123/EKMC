@@ -1,4 +1,4 @@
-%% rnn
+%% matlab m file: rnn
 for j=1:32
 numFeatures = 3840;
 numResponses = size(Ytr(:,j)',1);
