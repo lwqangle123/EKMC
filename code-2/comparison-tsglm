@@ -1,12 +1,14 @@
-%% matlab m file: tsglm
+X=X';
+y=y';
+
 for j=1:32
-    bb=glmfit(X_tr,Y_tr(:,j),'binomial');
-    yhat(:,j) = glmval(bb,X_tr,'logit');
-    yhat(:,j)=double(yhat(:,j)>0.5);
-    [m,n]=find(yhat(:,j)==Y_te(:,j));
-    Ac(j)=length(m)/size(yhat,1);
-    [m1,n1]=find(yhat(:,j)~=0);
-    [m2,n2]=find(Y_te(:,j)~=0);
-    [m3,n3]=find((yhat(:,j)+Y_te(:,j))==2);
-    Sk(j)=length(m3)/length(m2);
+x_train = X(1:10000,:);
+y_train = y(1:10000,j);
+x_test = X(10001:11000,:);
+y_test = y(10001:11000,j);
+fit2 = cvglmnet(x_train, y_train, 'binomial',[],[],10)
+Pred = glmnetPredict(fit2.glmnet_fit, x_train)
+
+Pred=double(Pred>0.5);
+mae(j)=min(sum(abs(Pred-y_test))/size(Pred,1));
 end
