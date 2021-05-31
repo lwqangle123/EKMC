@@ -1,11 +1,12 @@
 X=X';
 y=y';
-
+tr=10000;
+te=tr+1000;
 for j=1:32
-x_train = X(1:10000,:);
-y_train = y(1:10000,j);
-x_test = X(10001:11000,:);
-y_test = y(10001:11000,j);
+x_train = X(1:tr,:);
+y_train = y(1:tr,j);
+x_test = X(tr+1:te,:);
+y_test = y(tr+1:te,j);
 fit2 = cvglmnet(x_train, y_train, 'binomial',[],[],10)
 Pred = glmnetPredict(fit2.glmnet_fit, x_train)
 
