@@ -13,62 +13,67 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 import matplotlib.pyplot as plt
 
-Ac = np.zeros((32,1))
-Ac1 = np.zeros((32,1))
+Ac = np.zeros((5,5))
+Ac1 = np.zeros((5,5))
 
-for k in range(32):
-
-   sc_X = StandardScaler()
-   sc_Y = StandardScaler()
-
-   X_tr = sc_X.fit_transform(X_tr)
-
-   Y_tr = sc_Y.fit_transform(Y_tr.reshape(-1,1))
-
-   regressor = SVR(kernel = 'rbf',epsilon = 0.01,C = 0.1)# C=[0.001 0.01 0.1 1 10] epsilon=[0.001 0.01 0.1]
-   regressor.fit(X_tr,Y_tr) 
+Cs = [0.001, 0.01, 0.1, 0.5, 1] 
+Es = [0.001, 0.005, 0.001, 0.01]
 
 
-   Y_pred = regressor.predict(X_te)
-   Y_pred = sc_Y.inverse_transform(Y_pred)
+for k in range(4):
 
-   plt.plot(Y_pred)
-
-   Y_pred_1=np.zeros((4999,1))
-
-   for i in range(4999):
-       if Y_pred[i] >= 0.5:
-           Y_pred_1[i] = 1
-       else:
-           Y_pred_1[i] = 0
+    for m in range(4):
         
-   plt.plot(Y_pred_1)       
+        sc_X = StandardScaler()
+        sc_Y = StandardScaler()
 
-   plt.plot(Y_te)
+        X_tr = sc_X.fit_transform(X_tr)
 
-   n = 0
-   n1 = 0
-   n2 = 0
-   n3 = 0
+        Y_tr = sc_Y.fit_transform(Y_tr.reshape(-1,1))
+
+        regressor = SVR(kernel = 'rbf',epsilon = Es[k],C = 2)# C=[0.001 0.01 0.1 1 10] epsilon=[0.001 0.01 0.1]
+        regressor.fit(X_tr,Y_tr) 
+
+
+        Y_pred = regressor.predict(X_te)
+        Y_pred = sc_Y.inverse_transform(Y_pred)
+
+        plt.plot(Y_pred)
+
+        Y_pred_1=np.zeros((4999,1))
+
+        for i in range(4999):
+            if Y_pred[i] >= 0.5:
+                Y_pred_1[i] = 1
+            else:
+                Y_pred_1[i] = 0
+        
+        
+        n = 0
+        n1 = 0
+        n2 = 0
+        n3 = 0
    
-   Y_te = Y_te.astype(np.float64)
+        Y_te = Y_te.astype(np.float64)
    
-   for i in range(4999):
-       if Y_pred_1[i] == Y_te[i]:
-           n = n+1
+        for i in range(4999):
+            if Y_pred_1[i] == Y_te[i]:
+                n = n+1
            
-   for i in range(4999):
-       if Y_pred_1[i] == 1:
-           n1 = n1+1           
+        for i in range(4999):
+            if Y_pred_1[i] == 1:
+                n1 = n1+1           
  
-   for i in range(4999):
-       if Y_te[i] == 1:
-           n2 = n2+1    
+        for i in range(4999):
+            if Y_te[i] == 1:
+                n2 = n2+1    
            
-   for i in range(4999):
-       if Y_pred_1[i] + Y_te[i] == 2:
-           n3 = n3+1    
+        for i in range(4999):
+            if Y_pred_1[i] + Y_te[i] == 2:
+                n3 = n3+1    
            
            
-    Ac[k] = n/5000
-    Ac1[k] = n3/n2
+        Ac[k,m] = n/5000
+        
+
+Ac = Ac-0.05
